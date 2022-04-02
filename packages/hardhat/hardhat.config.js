@@ -13,6 +13,8 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
+const { RINKEBY_INFURA_KEY, RINKEBY_DEPLOYER_PRIV_KEY } = process.env;
+
 
 /*
       📡 This is where you configure your deploy configuration for 🏗 scaffold-eth
@@ -20,7 +22,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 */
 
 // Select the network you want to deploy to here:
-const defaultNetwork = "localhost";
+const defaultNetwork = "rinkeby";
 
 const mainnetGwei = 115;
 
@@ -54,11 +56,9 @@ module.exports = {
       // (you can put in a mnemonic here to set the deployer locally)
     },
     rinkeby: {
-      url: "https://rinkeby.infura.io/v3/ec6a8acd1d354717acec099ad46a0bab", // <---- YOUR INFURA ID! (or it won't work)
+      url: `https://rinkeby.infura.io/v3/${RINKEBY_INFURA_KEY}`, // <---- YOUR INFURA ID! (or it won't work)
       //    url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXX/eth/rinkeby", // <---- YOUR MORALIS ID! (not limited to infura)
-      accounts: {
-        mnemonic: mnemonic(),
-      },
+      accounts: [`0x${RINKEBY_DEPLOYER_PRIV_KEY}`],
     },
     kovan: {
       url: "https://kovan.infura.io/v3/ec6a8acd1d354717acec099ad46a0bab", // <---- YOUR INFURA ID! (or it won't work)
