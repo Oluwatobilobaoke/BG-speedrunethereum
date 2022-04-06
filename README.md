@@ -1,7 +1,7 @@
 # 🏗 scaffold-eth | 🏰 BuidlGuidl
 
-Frontend Url - https://royal-join.surge.sh/
-Rinkeby Url - https://rinkeby.etherscan.io/address/0x4086a77ea6344118c22d8294206e0b012a073732
+* Frontend Url - https://royal-join.surge.sh/
+* Rinkeby Url - https://rinkeby.etherscan.io/address/0x4086a77ea6344118c22d8294206e0b012a073732
 ## 🚩 Challenge 0: 🎟 Simple NFT Example 🤓
 
 🎫 Create a simple NFT to learn basics of 🏗 scaffold-eth. You'll use [👷‍♀️ HardHat](https://hardhat.org/getting-started/) to compile and deploy smart contracts. Then, you'll use a template React app full of important Ethereum components and hooks. Finally, you'll deploy an NFT to a public network to share with friends! 🚀
